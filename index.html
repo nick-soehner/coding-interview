@@ -18,11 +18,11 @@
 <body>
     <div class="background-img">
         <div class="bar"></div>
-        <div class="container d-flex justify-content-start h-100 main-container">
+        <div class="container d-flex justify-content-start h-100 main-container overflow-auto">
 
             <!-- EXPLORE SCREEN -->
 
-            <div id="explore-box" class="wrapper d-none">
+            <div id="explore-box" class="wrapper">
                 <div class="container h-75 d-flex flex-column align-items-start justify-content-end d-none">
                     <div class="row">
                         <div class="col">
@@ -40,19 +40,19 @@
 
             <!-- DETAILS BOX -->
 
-            <div id="details-box" class="wrapper">
+            <div id="details-box" class="wrapper d-none">
                 <div class="container d-flex h-100 align-items-center">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="container-fluid text-box">
+                        <div id="text-box" class="col-lg-6 text-box">
+                            <div id="text-container" class="container-fluid text-container-hidden">
                                 <div class="row">
                                     <div class="col d-flex justify-content-end pt-1">
                                         <img id="close-btn" class="close-btn pt-3" src="./images/x-solid.svg"
                                             alt="close">
                                     </div>
                                 </div>
-                                <div class="row p-5">
-                                    <div class="col">
+                                <div class="row">
+                                    <div class="col p-lg-5">
                                         <h2 class="mb-3 explore-text">Explore</h2>
                                         <div class="underline mb-4"></div>
                                         <p class="lh-lg filler-text">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -79,7 +79,7 @@
 
             <div class="fixed-bottom d-flex justify-content-end m-4">
                 <div class="row">
-                    <div class="col d-flex flex-column">
+                    <div class="col d-sm-flex flex-column">
                         <img class="social-icons" src="./images/Facebook.svg" alt="">
                         <img class="social-icons" src="./images/Instagram.svg" alt="">
                     </div>
