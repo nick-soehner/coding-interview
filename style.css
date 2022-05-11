@@ -66,13 +66,6 @@ h6,
 	font-size: 1.25em;
 }
 
-.explore-text {
-	font-size: 3.5em;
-	font-weight: 700;
-	color: var(--maroon);
-	letter-spacing: 0.07em;
-}
-
 #plus-icon {
 	width: 40px;
 	cursor: pointer;
@@ -92,18 +85,19 @@ h6,
 
 /* ========== DETAILS BOX ========== */
 
+.close-btn {
+	color: var(--maroon);
+	width: 15px;
+	cursor: pointer;
+}
 
 .text-box {
 	box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.61);
 	background-color: white;
 	z-index: 1;
 	transform-origin: 10% 80%;
-	animation: detailShow 400ms;
-    max-height: 70vh;
-}
-
-.slide-out {
-	animation: slideOut 300ms 200ms ease-out forwards;
+	animation: textBoxShow 400ms;
+    max-height: 80vh;
 }
 
 .text-container {
@@ -115,13 +109,14 @@ h6,
 .text-container-hidden {
 	opacity: 100;
 	transform: translateX(0rem);
-	animation: opacityOut2 200ms ease-out forwards;
+	animation: textContainerHidden 200ms ease-out forwards;
 }
 
-.close-btn {
+.explore-text {
+	font-size: 3.5em;
+	font-weight: 700;
 	color: var(--maroon);
-	width: 15px;
-	cursor: pointer;
+	letter-spacing: 0.07em;
 }
 
 .underline {
@@ -144,9 +139,13 @@ h6,
 	cursor: pointer;
 }
 
+.slide-out {
+	animation: slideOut 300ms 200ms ease-out forwards;
+}
+
 /* ========== ANIMATIONS ========== */
 
-@keyframes detailShow {
+@keyframes textBoxShow {
 	0% {
 		transform: scale(0);
 	}
@@ -164,7 +163,7 @@ h6,
 	}
 }
 
-@keyframes opacityOut2 {
+@keyframes textContainerHidden {
 	from {
 		opacity: 100%;
 	}
